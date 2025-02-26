@@ -112,11 +112,11 @@ export default function Login() {
                         <Modal.Body className='b-black'>
                             <div className='user-info'>
                                 <strong className='text-white mx-2'>Enter Your Email</strong>
-                                <input onChange={(e) => setEmail(e.target.value)} type="text" value={email} placeholder="Email" className="bw-input" />
+                                <input onChange={(e) => setEmail(e.target.value)} type="email" value={email} placeholder="Email" className="bw-input" required autocomplete="email" />
                             </div>
                             <div className="user-info">
                                 <strong className='text-white mx-2'>Enter Your Password</strong>
-                                <input onChange={(e) => setPassword(e.target.value)} type={passwordType} value={password} placeholder="Password" className="bw-input" />
+                                <input onChange={(e) => setPassword(e.target.value)} type={passwordType} value={password} placeholder="Password" className="bw-input" required minlength="8" autocomplete="current-password" />
                                 <span onClick={togglePasswordVisibility} className=' password'>
                                     {hidePass ? <GoEyeClosed /> : <IoEye />}
                                 </span>
@@ -147,11 +147,11 @@ export default function Login() {
                         </div>
                         <div className='user-info'>
                             <strong className='text-white mx-2'>Enter Your Email</strong>
-                            <input onChange={(e) => setUser({ ...user, cemail: e.target.value })} value={user.cemail} type="email" placeholder="Email" className="bw-input" />
+                            <input onChange={(e) => setUser({ ...user, cemail: e.target.value })} value={user.cemail} type="email" placeholder="Email" className="bw-input" required autocomplete="email" />
                         </div>
                         <div className="user-info">
                             <strong className='text-white mx-2'>Enter Your Password</strong>
-                            <input onChange={(e) => setUser({ ...user, cpassword: e.target.value })} value={user.cpassword} type={passwordType} placeholder="Create Password" className="bw-input" />
+                            <input onChange={(e) => setUser({ ...user, cpassword: e.target.value })} value={user.cpassword} type={passwordType} placeholder="Create Password" className="bw-input" required minlength="8" autocomplete="current-password" />
                             <span onClick={togglePasswordVisibility} className=' password-signup'>
                                 {hidePass ? <GoEyeClosed /> : <IoEye />}
                             </span>
