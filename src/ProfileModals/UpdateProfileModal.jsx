@@ -27,7 +27,7 @@ export default function UpdateProfileModal({ setModal, setUser, theme, loading2,
         formData.append("context", JSON.stringify({ User: { id: localStorage.getItem("userId") } }));
         // console.log(formData)
         try {
-            const response = await fetch("http://localhost:5000/upload", {
+            const response = await fetch("https://socialmedia-realtime-backend.onrender.com/upload", {
                 method: "POST",
                 body: formData,
             });
