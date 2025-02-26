@@ -33,7 +33,7 @@ const authLink = setContext((_, { headers }) => {
 // WebSocket Link for subscriptions
 const wsLink = new GraphQLWsLink(
   createClient({
-    url: 'ws://socialmedia-realtime-backend.onrender.com/graphql',
+    url: 'wss://socialmedia-realtime-backend.onrender.com/graphql',
     connectionParams: () => {
       const token = localStorage.getItem("token");
       return { token: token || '' };
