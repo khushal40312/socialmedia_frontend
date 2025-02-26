@@ -16,7 +16,7 @@ import threadStore from './store/index.js';
 
 // HTTP Link for queries and mutations
 const httpLink = createHttpLink({
-  uri: 'http://localhost:5000/graphql',
+  uri: 'https://socialmedia-realtime-backend.onrender.com/graphql',
 });
 
 // Authentication context link
@@ -33,7 +33,7 @@ const authLink = setContext((_, { headers }) => {
 // WebSocket Link for subscriptions
 const wsLink = new GraphQLWsLink(
   createClient({
-    url: 'ws://localhost:5000/graphql',
+    url: 'ws://https://socialmedia-realtime-backend.onrender.com/graphql',
     connectionParams: () => {
       const token = localStorage.getItem("token");
       return { token: token || '' };
