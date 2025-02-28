@@ -59,20 +59,7 @@ export default function VisitProfileThread() {
     };
 
     const userId = userInfo?.id;
-    function formatUrl(input) {
   
-        if (input.startsWith('/uploads')) {
-            return `${import.meta.env.VITE_BACKEND_URL}${input}`; // Return as is if it starts with "https"
-        }
-        else if (input.startsWith("blob:")) {
-            return input;
-
-        } else {
-
-            return `/${input}`
-        }
-
-    }
     return (
         <div id="scrollable-content2">
             {posts.length === 0 ? (
@@ -88,7 +75,7 @@ export default function VisitProfileThread() {
                         return (<div key={item.id} className="container my-1">
                             <div >
                                 <div className='user-info'>
-                                    <img className='post-Profile-img' src={`${formatUrl(userInfoALT?.picture)}` || "default.jpg"} alt="profile pic" />
+                                    <img className='post-Profile-img' src={userInfoALT?.picture || "default.jpg"} alt="profile pic" />
                                     <strong style={{ cursor: "pointer" }} className='mx-1'>_{userInfoALT.firstName + userInfoALT.lastName}_</strong>
                                     <span className='mx-1 text-secondary'>
                                         {dateConvert(item.createdAt)}
