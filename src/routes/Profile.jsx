@@ -170,21 +170,6 @@ export default function Profile() {
     if (error3) console.error("Failed to load posts. Please try again.");
 
 
-    function formatUrl(input) {
-        if (!loading) {
-
-        
-        if (input.startsWith('/uploads')) {
-            return `${import.meta.env.VITE_BACKEND_URL}${input}`; // Return as is if it starts with "https"
-        }
-        else if (input.startsWith("blob:")) {
-            return input;
-
-        } else {
-
-            return `/${input}`
-        }
-    }}
 
     return (
         <>
@@ -225,14 +210,14 @@ export default function Profile() {
                         followerlist={followerlist}
                         fetchMoreDebounced={fetchMoreDebounced}
                         hasMore={hasMore}
-                        formatUrl={formatUrl} /> :
+                         /> :
                     <FollowingModal
                         setModal2={setModal2}
                         theme={theme}
                         followinglist={followinglist}
                         fetchMoreDebounced2={fetchMoreDebounced2}
                         hasMore2={hasMore2}
-                        formatUrl={formatUrl} />}
+                        />}
             </Modal>
         </>
     );
