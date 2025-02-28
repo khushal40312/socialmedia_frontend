@@ -228,20 +228,6 @@ export default function VisitProfile() {
   if (loading3) {
     return <div className="text-center text-white">Loading...</div>;
   }
-  function formatUrl(input) {
-  
-    if (input.startsWith('/uploads')) {
-        return `${import.meta.env.VITE_BACKEND_URL}${input}`; // Return as is if it starts with "https"
-    }
-    else if (input.startsWith("blob:")) {
-        return input;
-
-    } else {
-
-        return `/${input}`
-    }
-
-}
 
 
 
@@ -278,7 +264,6 @@ export default function VisitProfile() {
         theme={theme}
         activeTab={activeTab}
         userInfo={userInfo}
-        formatUrl={formatUrl}
         followers={followers}
         isFollowByUser={isFollowByUser}
         handleFollowToggle={handleFollowToggle}
@@ -303,7 +288,7 @@ export default function VisitProfile() {
             followerlist={followerlist}
             fetchMoreDebounced={fetchMoreDebounced}
             hasMore={hasMore}
-            formatUrl={formatUrl}
+           
             myId={myId} /> :
           <VisitedModalFollowings theme={theme}
           setModal2={setModal2}
@@ -311,7 +296,7 @@ export default function VisitProfile() {
             followinglist={followinglist}
             fetchMoreDebounced2={fetchMoreDebounced2}
             hasMore2={hasMore2}
-            formatUrl={formatUrl}
+          
             myId={myId} />}
       </Modal>
     </>
