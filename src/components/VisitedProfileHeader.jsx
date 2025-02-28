@@ -3,7 +3,7 @@ import { FaInstagram } from 'react-icons/fa6';
 import { useSelector } from 'react-redux';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 
-export default function VisitedProfileHeader({ followers, theme, userInfo, formatUrl,  isFollowByUser, handleFollowToggle, activeTab, setModal2, color }) {
+export default function VisitedProfileHeader({ followers, theme, userInfo,  isFollowByUser, handleFollowToggle, activeTab, setModal2, color }) {
     const [isZoomed, setIsZoomed] = useState(false); // State to control the zoom modal
 const data= useSelector((store)=>store.ALTUser)
 const followerslist= useSelector((store)=>store.userFollower)
@@ -35,7 +35,7 @@ const isfollower= followerslist.some(f=>f.id===localStorage.getItem("userId"))
                                 objectFit: "cover",
                                 cursor: "pointer"
                             }}
-                            src={formatUrl(userInfo?.picture) || "default.jpg"}
+                            src={userInfo?.picture || "default.jpg"}
                             alt="Profile"
                             onClick={handleImageClick} // Click to zoom
                         />
@@ -116,7 +116,7 @@ const isfollower= followerslist.some(f=>f.id===localStorage.getItem("userId"))
                     onClick={closeZoomModal} // Close modal on click
                 >
                     <img
-                        src={formatUrl(userInfo?.picture) || "default.jpg"}
+                        src={userInfo?.picture || "default.jpg"}
                         alt="Zoomed Profile"
                         style={{
                             maxHeight: '80%',
