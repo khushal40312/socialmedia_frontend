@@ -6,7 +6,7 @@ import { IoIosArrowDropright } from 'react-icons/io'
 import { useNavigate } from 'react-router-dom'
 
 
-export default function FollowingModal({setModal2, theme, followinglist, fetchMoreDebounced2, hasMore2, formatUrl }) {
+export default function FollowingModal({setModal2, theme, followinglist, fetchMoreDebounced2, hasMore2 }) {
     const navigate = useNavigate();
     const findProfile = (payload) => {
         const { username } = payload
@@ -34,7 +34,7 @@ export default function FollowingModal({setModal2, theme, followinglist, fetchMo
                             <div className="following-follower-list d-flex align-items-center">
                                 <img
                                     className="post-Profile-img"
-                                    src={`${formatUrl(following.picture)} ` || "default.jpg"}
+                                    src={following.picture || "default.jpg"}
                                     alt={`${following.firstName}'s profile`}
                                 />
                                 <div className="mx-2">
