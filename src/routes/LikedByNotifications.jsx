@@ -159,7 +159,7 @@ const LikedByNotifications = () => {
 
   }
 
-if (isLoggedIn) {
+
 
   useSubscription(READ_NOTIFICATION, {
     onData: ({ data }) => {
@@ -178,9 +178,9 @@ if (isLoggedIn) {
       }
     },
   });
-}
+
   // Subscription for real-time updates
- if (isLoggedIn) { useSubscription(NEW_NOTIFICATION, {
+  useSubscription(NEW_NOTIFICATION, {
     onData: ({ data }) => {
       const newMessage = data?.data?.likedNotification[0];
 
@@ -204,7 +204,7 @@ if (isLoggedIn) {
       console.error("Subscription error:", error);
       toast.error("Failed to fetch new notifications. Please try again.");
     },
-  });}
+  });
   const findProfile = (payload) => {
     const { username } = payload
 
