@@ -209,21 +209,7 @@ export default function Inbox() {
     return formatDistanceToNow(givenDate, { addSuffix: true });
   };
 
-  function formatUrl(input) {
-    
 
-    
-    if (input.startsWith('/uploads')) {
-        return `${import.meta.env.VITE_BACKEND_URL}${input}`; // Return as is if it starts with "https"
-    }
-    else if (input.startsWith("blob:")) {
-        return input;
-
-    } else {
-
-        return `/${input}`
-    }
-}
   const chatss = chats.sort((a, b) => b.lastMessageTime - a.lastMessageTime);
   // console.log(chatss)
   useEffect(() => {
@@ -256,7 +242,7 @@ if (loading) {
                 >
                   <div style={{ position: "relative" }}>
                     <img
-                      src={formatUrl(chat.picture) || "/default.jpg"}
+                      src={chat.picture || "/default.jpg"}
                       alt="profile"
                       style={{
                         width: "50px",
@@ -267,7 +253,7 @@ if (loading) {
                       }}
                       onClick={(e) => {
                         e.preventDefault(); // Prevent navigation
-                        setZoomImage(formatUrl(chat.picture));
+                        setZoomImage(chat.picture)
                       }}
                     />
                     {chat.isActive && (
