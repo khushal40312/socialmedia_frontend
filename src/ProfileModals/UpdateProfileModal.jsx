@@ -27,7 +27,7 @@ export default function UpdateProfileModal({ setModal, setUser, theme, loading2,
         formData.append("context", JSON.stringify({ User: { id: localStorage.getItem("userId") } }));
         // console.log(formData)
         try {
-            const response = await fetch("https://socialmedia-realtime-backend.onrender.com/upload", {
+            const response = await fetch("http://localhost:5000/upload", {
                 method: "POST",
                 body: formData,
             });
@@ -54,20 +54,7 @@ export default function UpdateProfileModal({ setModal, setUser, theme, loading2,
             console.error("Upload Error:", error);
         }
     };
-    function formatUrl(input) {
-        // console.log(input)
-        if (input.startsWith('/uploads')) {
-            return `${import.meta.env.VITE_BACKEND_URL}${input}`; // Return as is if it starts with "https"
-        }
-        else if (input.startsWith("blob:")) {
-            return input;
-
-        } else {
-
-            return `/${input}`
-        }
-
-    }
+ 
     return (
         <>
             <Modal className="border-rounded" show={showModal} onHide={() => setModal(false)} centered scrollable>
@@ -99,7 +86,7 @@ export default function UpdateProfileModal({ setModal, setUser, theme, loading2,
                         <div className="user-info">
                             <strong className={`${theme} mx-2`}>Profile Image</strong>
                             <input type="file" accept="image/*" onChange={handleFileChange} className="form-control" />
-                            {preview && <img src={formatUrl(preview)} alt="Preview" className="img-thumbnail mt-2" width="100" />}
+                            {preview && <img src={preview} alt="Preview" className="img-thumbnail mt-2" width="100" />}
                         </div>
                         <div className={`${theme} container d-flex justify-content-between`}>
                             <button disabled={loading2} onClick={handleUpload} className={`post-btn ${theme}`}>
