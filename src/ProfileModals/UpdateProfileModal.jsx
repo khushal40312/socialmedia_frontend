@@ -8,7 +8,7 @@ export default function UpdateProfileModal({ setModal, setUser, theme, loading2,
     const [file, setFile] = useState(null);
     const [preview, setPreview] = useState(user.picture || ""); // Preview image
     const dispatch = useDispatch();
-
+  const [loading, setLoading] = useState(false); // Preview image
     // Handle file selection
     const handleFileChange = (e) => {
         const selectedFile = e.target.files[0];
@@ -20,6 +20,7 @@ export default function UpdateProfileModal({ setModal, setUser, theme, loading2,
 
     // Upload file function
     const handleUpload = async () => {
+        setLoading(true)
         if (!file) return alert("Please select a file first.");
 
         const formData = new FormData();
@@ -47,10 +48,15 @@ export default function UpdateProfileModal({ setModal, setUser, theme, loading2,
 
                 setUser((prevUser) => ({ ...prevUser, picture: data.user.picture })); // Update user state
                 setPreview(data.user.picture); // Update preview
+        setLoading(false)
+                
                 setModal(false);
+                
             }
 
         } catch (error) {
+        setLoading(false)
+            
             console.error("Upload Error:", error);
         }
     };
