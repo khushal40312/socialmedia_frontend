@@ -106,20 +106,7 @@ export default function SearchProfile() {
     
     if (error) return <p className="text-center mt-4">An error occurred. Please try again later.</p>;
 
-    function formatUrl(input) {
-  
-        if (input.startsWith('/uploads')) {
-            return `${import.meta.env.VITE_BACKEND_URL}${input}`; // Return as is if it starts with "https"
-        }
-        else if (input.startsWith("blob:")) {
-            return input;
-
-        } else {
-
-            return `/${input}`
-        }
-
-    }
+    
 
     const findProfile = (payload) => {
         const { username } = payload;
@@ -181,7 +168,7 @@ export default function SearchProfile() {
                                                     {/* Profile Picture with Zoom */}
                                                     <img
                                                         className="post-Profile-img"
-                                                        src={formatUrl(user.picture) || "default.jpg"}
+                                                        src={user.picture || "default.jpg"}
                                                         alt="profile pic"
                                                         style={{
                                                             width: "50px",
@@ -190,7 +177,7 @@ export default function SearchProfile() {
                                                             objectFit: "cover",
                                                             cursor: "pointer",
                                                         }}
-                                                        onClick={() => handleImageClick(formatUrl(user.picture))}
+                                                        onClick={() => handleImageClick(user.picture)}
                                                     />
 
                                                     {/* Name */}
