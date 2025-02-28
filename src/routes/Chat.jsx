@@ -257,22 +257,7 @@ const Chat = () => {
     boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
     marginTop: "7px"
   });
-  const formatUrl = (input) => {
-    // console.log(input)
-    if (!input || typeof input !== 'string') {
-      return "/default.jpg"; // Fallback to a default image
-    }
-    if (input.startsWith('/uploads')) {
-      return `${import.meta.env.VITE_BACKEND_URL}${input}`; // Return as is if it starts with "https"
-  }
-  else if (input.startsWith("blob:")) {
-      return input;
 
-  } else {
-
-      return `/${input}`
-  }
-  };
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") setZoomImage(null);
@@ -286,12 +271,12 @@ const Chat = () => {
       <div className={`${theme} mobile-width`} style={{ width: "66vw", backgroundColor: "#1e1e1e", color: "#fff", padding: "20px" }}>
         <div className="d-flex">
           <img
-            src={formatUrl(user.picture) || "/default.jpg"}
+            src={user.picture || "/default.jpg"}
             alt="profile"
             style={{ width: "45px", height: "45px", marginBottom: "7px", borderRadius: "50%", cursor: "pointer" }}
             onClick={(e) => {
               e.preventDefault(); // Prevent navigation
-              setZoomImage(formatUrl(user.picture) || "/default.jpg");
+              setZoomImage(user.picture || "/default.jpg");
             }}
           />
 
