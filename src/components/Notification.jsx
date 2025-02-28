@@ -11,16 +11,7 @@ const Notification = ({ link,picture, message, isVisible, onClose }) => {
       return () => clearTimeout(timer);
     }
   }, [isVisible, onClose]);
-  const formatUrl = (input) => {
-    // console.log(input)
-    if (!input || typeof input !== 'string') {
-      return "/default.jpg"; // Fallback to a default image
-    }
-    if (input.startsWith('https')) {
-      return input;
-    }
-    return `/${input}`;
-  };
+ 
   return (
     isVisible && (
       <Link
@@ -31,7 +22,7 @@ const Notification = ({ link,picture, message, isVisible, onClose }) => {
       <div className="notification-banner">
         <div className="notification-content">
           <strong className="mx-2">{message}</strong>
-          <img  style={{ width: "40px", height: "40px", marginBottom: "7px", borderRadius: "50%", cursor: "pointer" }} src={formatUrl(picture)||"/default.jpg"} alt="profilepic" />
+          <img  style={{ width: "40px", height: "40px", marginBottom: "7px", borderRadius: "50%", cursor: "pointer" }} src={picture||"/default.jpg"} alt="profilepic" />
         </div>
         {/* <button style={{background:"#171717",marginLeft:"14px",borderRadius:"4px",border:"1px solid white",color:"white"}} className="notification-close" onClick={onClose}> */}
           {/* &times;
