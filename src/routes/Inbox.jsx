@@ -242,7 +242,7 @@ if (loading) {
                 >
                   <div style={{ position: "relative" }}>
                     <img
-                      src={chat.picture || "/default.jpg"}
+                      src={chat?.picture || "/default.jpg"}
                       alt="profile"
                       style={{
                         width: "50px",
@@ -253,7 +253,7 @@ if (loading) {
                       }}
                       onClick={(e) => {
                         e.preventDefault(); // Prevent navigation
-                        setZoomImage(chat.picture)
+                        setZoomImage(chat?.picture)
                       }}
                     />
                     {chat.isActive && (
