@@ -4,20 +4,9 @@ import { IoIosArrowDropright } from 'react-icons/io'
 import { useNavigate } from 'react-router-dom';
 
 export default function LikesModal({ likes, theme, showModal, setModal }) {
-    const navigate = useNavigate();
+    
 
-    function formatUrl(input) {
-        if (input.startsWith('https')) {
-            return input;
-        }
-        return `/${input}`;
-    }
-    const findProfile = (payload) => {
-        const { username } = payload
-
-        navigate(`/${username}`);
-        setModal(false)
-    }
+   
     return (
         <Modal className={`border-rounded`}
             show={showModal}
@@ -33,7 +22,7 @@ export default function LikesModal({ likes, theme, showModal, setModal }) {
                                 <div className="mx-2">
                                     <img
                                         className="post-Profile-img mx-1"
-                                        src={`${formatUrl(post.picture)} ` || "default.jpg"}
+                                        src={post.picture  || "default.jpg"}
                                         alt={`${post.firstName}'s profile`}
                                     />
                                     <strong>{post.firstName} {post.lastName}</strong>
