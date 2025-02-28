@@ -182,20 +182,7 @@ export default function HomePosts() {
     navigate(`/${username}`);
 
   }
-  function formatUrl(input) {
   
-    if (input.startsWith('/uploads')) {
-        return `${import.meta.env.VITE_BACKEND_URL}${input}`; // Return as is if it starts with "https"
-    }
-    else if (input.startsWith("blob:")) {
-        return input;
-
-    } else {
-
-        return `/${input}`
-    }
-
-}
   return (
     <>
       <div id="scrollable-content">
@@ -218,7 +205,7 @@ export default function HomePosts() {
             return (
               <div key={post.id}>
                 <div className='user-info'>
-                  <img className='post-Profile-img' src={formatUrl(post.author.picture) || "default.jpg"} alt="profile pic" />
+                  <img className='post-Profile-img' src={post.author.picture || "default.jpg"} alt="profile pic" />
                   <strong onClick={() => findProfile({
                     // username: `${post.author.firstName}${post.author.lastName}`.replace(/\s+/g, '_'),
                     username: `${post.author.id}@${post.author.firstName}${post.author.lastName}` || 'unknown'
