@@ -20,8 +20,8 @@ export default function UpdateProfileModal({ setModal, setUser, theme, loading2,
 
     // Upload file function
     const handleUpload = async () => {
+        if (!file) return toast.error("Please select a file first.");
         setLoading(true)
-        if (!file) return alert("Please select a file first.");
 
         const formData = new FormData();
         formData.append("picture", file);
@@ -58,7 +58,9 @@ export default function UpdateProfileModal({ setModal, setUser, theme, loading2,
         setLoading(false)
             
             console.error("Upload Error:", error);
-        }
+        }finally {
+        setLoading(false); // Always reset loading state, even on errors
+    }
     };
  
     return (
@@ -67,7 +69,7 @@ export default function UpdateProfileModal({ setModal, setUser, theme, loading2,
                 <Modal.Header className={`${theme} b-black d-flex justify-content-center`}>
                     <Modal.Title className={`login-title ${theme}`}>Update Profile</Modal.Title>
                 </Modal.Header>
-                {loading2 ? <MoreSpinner /> : (
+                {loading2||loading ? <MoreSpinner /> : (
                     <Modal.Body className={`${theme} b-black`}>
                         <div className={`${theme} user-info`}>
                             <strong className={`${theme}-input mx-2`}>First Name</strong>
