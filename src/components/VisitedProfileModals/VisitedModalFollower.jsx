@@ -7,7 +7,7 @@ import MoreSpinner from '../MoreSpinner'
 import { PiSmileyWinkFill } from 'react-icons/pi';
 import { useNavigate } from 'react-router-dom';
 
-export default function VisitedModalFollower({setModal2,myId, theme, followerlist, fetchMoreDebounced, hasMore, formatUrl, data2 }) {
+export default function VisitedModalFollower({setModal2,myId, theme, followerlist, fetchMoreDebounced, hasMore, data2 }) {
     const navigate = useNavigate();
     const findProfile = (payload) => {
         const { username } = payload
@@ -37,7 +37,7 @@ export default function VisitedModalFollower({setModal2,myId, theme, followerlis
                             <div className="following-follower-list d-flex align-items-center">
                                 <img
                                     className="post-Profile-img"
-                                    src={`${formatUrl(follower.picture)} ` || "default.jpg"}
+                                    src={follower.picture || "default.jpg"}
                                     alt={`${follower.firstName}'s profile`}
                                 />
                                 <div className="mx-2">
