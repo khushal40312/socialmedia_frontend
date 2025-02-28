@@ -7,22 +7,6 @@ function ProfileHeader({ theme, userInfo, data, setModal, activeTab, setActiveTa
     const [isZoomed, setIsZoomed] = useState(false); // State to control the zoom modal
 
 
-    const formatUrl = (input) => {
-        // console.log(input)
-        if (!input || typeof input !== 'string') {
-          return "/default.jpg"; // Fallback to a default image
-        }
-        if (input.startsWith('/uploads')) {
-          return `${import.meta.env.VITE_BACKEND_URL}${input}`; // Return as is if it starts with "https"
-      }
-      else if (input.startsWith("blob:")) {
-          return input;
-    
-      } else {
-    
-          return `/${input}`
-      }
-      };
 
     const handleImageClick = () => {
         setIsZoomed(true); // Open the zoom modal
@@ -52,7 +36,7 @@ function ProfileHeader({ theme, userInfo, data, setModal, activeTab, setActiveTa
                                     objectFit: "cover",
                                     cursor: "pointer"
                                 }}
-                                src={`${formatUrl(userInfo?.picture)}` || "default.jpg"}
+                                src={userInfo?.picture || "default.jpg"}
                                 alt="Profile"
                                 onClick={handleImageClick} // Click to zoom
                             />
@@ -100,7 +84,7 @@ function ProfileHeader({ theme, userInfo, data, setModal, activeTab, setActiveTa
                     onClick={closeZoomModal} // Close modal on click
                 >
                     <img
-                        src={`${formatUrl(userInfo?.picture)}` || "default.jpg"}
+                        src={`${(userInfo?.picture)}` || "default.jpg"}
                         alt="Zoomed Profile"
                         style={{
                             maxHeight: '70%',
