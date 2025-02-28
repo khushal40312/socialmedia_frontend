@@ -55,22 +55,7 @@ export default function ProfileThreads() {
         return formatDistanceToNow(givenDate, { addSuffix: true });
     }
     const userId = userInfo?.id;
-    const formatUrl = (input) => {
-        // console.log(input)
-        if (!input || typeof input !== 'string') {
-          return "/default.jpg"; // Fallback to a default image
-        }
-        if (input.startsWith('/uploads')) {
-          return `${import.meta.env.VITE_BACKEND_URL}${input}`; // Return as is if it starts with "https"
-      }
-      else if (input.startsWith("blob:")) {
-          return input;
-    
-      } else {
-    
-          return `/${input}`
-      }
-      };
+
     return (
 
         <div id="scrollable-content2">
@@ -80,7 +65,7 @@ export default function ProfileThreads() {
                 return (<div key={item.id} className="container my-1">
                     <div >
                         <div className='user-info'>
-                            <img className='post-Profile-img' src={`${formatUrl(userInfo.picture)}` || "default.jpg"} alt="profile pic" />
+                            <img className='post-Profile-img' src={userInfo.picture || "default.jpg"} alt="profile pic" />
                             <strong className='mx-1'>_{userInfo.firstName + userInfo.lastName}_</strong>
                             <span className='mx-1 text-secondary'>
                                 {dateConvert(item.createdAt)}
