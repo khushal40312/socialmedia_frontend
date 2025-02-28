@@ -57,22 +57,7 @@ export default function Home() {
         }
     }, [error]);
 
-    const formatUrl = (input) => {
-        // console.log(input)
-        if (!input || typeof input !== 'string') {
-          return "/default.jpg"; // Fallback to a default image
-        }
-        if (input.startsWith('/uploads')) {
-          return `${import.meta.env.VITE_BACKEND_URL}${input}`; // Return as is if it starts with "https"
-      }
-      else if (input.startsWith("blob:")) {
-          return input;
-    
-      } else {
-    
-          return `/${input}`
-      }
-      };
+ 
     return (
         <>
             <div className={`${theme} d-flex justify-content-center home-responsive`} style={{ height: "90vh", width: "95vw" }}>
@@ -83,7 +68,7 @@ export default function Home() {
                         <div className="post-box">
                             <img
                                 className="Profile-img"
-                                src={formatUrl(data?.getCurrentLoggedInUser?.picture) || "default.jpg"}
+                                src={data?.getCurrentLoggedInUser?.picture || "default.jpg"}
                                 alt="profile pic"
                             />
                             <p onClick={() => dispatch(openAddPostModal())}>What's new?</p>
@@ -111,7 +96,7 @@ export default function Home() {
                         <div className="user-info">
                             <img
                                 className="Profile-img"
-                                src={formatUrl(data?.getCurrentLoggedInUser?.picture) || "default.jpg"}
+                                src={data?.getCurrentLoggedInUser?.picture || "default.jpg"}
                                 alt="profile pic"
                             />
                             <strong className={`mx-1 ${theme}`}>{data?.getCurrentLoggedInUser?.firstName || "Username"}</strong>
