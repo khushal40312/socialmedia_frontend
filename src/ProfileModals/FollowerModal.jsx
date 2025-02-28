@@ -35,7 +35,7 @@ export default function FollowerModal({ theme, followerlist, fetchMoreDebounced,
                             <div className="following-follower-list d-flex align-items-center">
                                 <img
                                     className="post-Profile-img"
-                                    src={follower.picture} ` || "default.jpg"}
+                                    src={follower.picture || "default.jpg"}
                                     alt={`${follower.firstName}'s profile`}
                                 />
                                 <div className="mx-2">
