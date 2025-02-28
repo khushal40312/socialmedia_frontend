@@ -6,7 +6,7 @@ import MoreSpinner from '../components/MoreSpinner'
 import { useNavigate } from 'react-router-dom';
 import { IoIosArrowDropright } from 'react-icons/io';
 
-export default function FollowerModal({ theme, followerlist, fetchMoreDebounced, hasMore, formatUrl ,setModal2 }) {
+export default function FollowerModal({ theme, followerlist, fetchMoreDebounced, hasMore ,setModal2 }) {
     const navigate = useNavigate();
     const findProfile = (payload) => {
         const { username } = payload
