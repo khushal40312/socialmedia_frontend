@@ -199,13 +199,23 @@
     .chat-res{
       height: 90vh !important;
     }
+  .nav-links {
+  left: 0;
+  bottom: 0; /* Ensure it stays at the bottom */
+  right: 0;
+}
 }
 @media (max-width: 500px) {
 
   .Follow-btn-mention {
     width: 170px;}
 
-}
+
+.nav-links {
+  left: 0;
+  bottom: 0; /* Ensure it stays at the bottom */
+  right: 0;
+}}
 * {
   border: 1px solid red;
 }
