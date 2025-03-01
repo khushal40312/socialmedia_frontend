@@ -267,7 +267,7 @@ const Chat = () => {
   }, []);
 
   return (
-    <div className={`${theme}`} style={{ display: "flex", height: "100vh" }}>
+    <div className={`${theme} chat-res`} style={{ display: "flex", height: "100vh" }}>
       <div className={`${theme} mobile-width`} style={{ width: "66vw", backgroundColor: "#1e1e1e", color: "#fff", padding: "20px" }}>
         <div className="d-flex">
           <img
