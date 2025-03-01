@@ -5,6 +5,7 @@ import gql from 'graphql-tag';
 import { formatDistanceToNow } from 'date-fns';
 import { useTheme } from '../../ThemeContext';
 import MoreSpinner from '../components/MoreSpinner';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const GET_USER_CHATS = gql`
   query GetUserChats {
@@ -215,9 +216,9 @@ export default function Inbox() {
   useEffect(() => {
     setActiveTab(location.pathname === `/inbox/${username}`);
   }, [location.pathname]);
-if (loading) {
-  return <div style={{marginBottom:"40px"}} className='d-flex justify-content-center mx-5 align-items-center'><MoreSpinner /></div>
-}
+  if (loading) {
+    return <div style={{ marginBottom: "300px" }} className='d-flex justify-content-center  align-items-center loader-res '> <LoadingSpinner/>  </div>
+  }
   return (
     <div className={`${theme}`} style={{ display: "flex", height: "100vh", width: '95vw' }}>
       {(!isMobile || !username) && (<div className={`${theme} remove-padding `} style={{ width: isMobile ? "100%" : "30%", backgroundColor: "#121212", color: "#fff", overflowY: "auto", padding: "10px" }}>
