@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function MoreSpinner() {
     return (
-        <div className='d-flex align-items-center justify-content-center'>
+        <div className='d-flex align-items-center justify-content-center my-4'>
             <div  style={{ width: "1rem", height: "1rem" }} className="spinner-grow text-primary" role="status">
                 <span className="visually-hidden">Loading...</span>
             </div>
