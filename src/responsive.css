@@ -216,14 +216,4 @@
   bottom: 0; /* Ensure it stays at the bottom */
   right: 0;
 }}
-* {
-  border: 1px solid red;
-}
-html, body {
-  overflow-x: hidden;
-  overflow-y: hidden;
-  
-  
-  width: 100vw;
-}
 
