@@ -6,6 +6,7 @@
   .main-div {
     width: 100vw !important;
     height: auto !important;
+    padding-bottom: 24px !important;
   }
   
   .thread-logo {
@@ -13,7 +14,7 @@
   }
   .nav-class {
     width: 100vw !important;
-    height: 7vh;
+    height: 8vh;
     flex-direction: row; /* Horizontal layout */
     justify-content: space-around;
     position: fixed;
@@ -42,6 +43,9 @@
     flex-direction: row !important;
     width: 100%;
     justify-content: space-around;
+    padding-left:7px !important ;
+    padding-right:7px !important;
+  
   }
 
   .nav-class {
@@ -68,21 +72,27 @@
     border-radius: 7px;
   }
   .hamburger-nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 4px;
   }
   .logout-section {
-    position: absolute;
+    position: fixed;
     top: 32px;
     /* right: 3px; */
     left: 195px;
+    width: 139px;
+    height: 57px;
+    font-size: 10px;
+    
   }
   .Appearance-section {
-    position: absolute;
+    position: fixed;
     top: 37px;
     /* right: 44px; */
-    left: 276px;
+    left: 244px;
+
+
   }
 
   .post-slide {
@@ -107,6 +117,7 @@
     } */
   .search-bar-res {
     width: 100vw !important;
+    /* height: 92vh !important; */
   }
   .search-div {
     width: 77vw;
