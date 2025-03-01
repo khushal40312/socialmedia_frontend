@@ -156,7 +156,7 @@ export default function SearchProfile() {
                                     >
                                         {filteredUsers.map((user) => (
                                             <div className="container my-1 search-component" key={user.id}>
-                                                <div
+                                                {loading?<LoadingSpinner/>:    <div
                                                     style={{
                                                         border: "2px solid white",
                                                         borderRadius: "25px",
@@ -220,7 +220,7 @@ export default function SearchProfile() {
                                                     >
                                                         Profile
                                                     </button>
-                                                </div>
+                                                </div>}
                                             </div>
                                         ))}
                                     </InfiniteScroll>
