@@ -206,3 +206,14 @@
     width: 170px;}
 
 }
+* {
+  border: 1px solid red;
+}
+html, body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  
+  
+  width: 100vw;
+}
+
