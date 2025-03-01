@@ -6,7 +6,7 @@
     display: none;
   }
   .nav-class {
-    /* position: sticky !important; */
+    position: sticky !important;
     flex-direction: row !important;
   }
   .nav-links {
