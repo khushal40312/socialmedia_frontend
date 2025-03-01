@@ -166,7 +166,7 @@ export default function Profile() {
     if (loading) {
         return <div style={{marginBottom:"300px"}} className='d-flex justify-content-center  align-items-center loader-res'> <MoreSpinner /></div>;
     }
-    if (loading3) return return <div style={{marginBottom:"300px"}} className='d-flex justify-content-center  align-items-center loader-res'> <MoreSpinner /></div>;   
+    if (loading3) return  <div style={{marginBottom:"300px"}} className='d-flex justify-content-center  align-items-center loader-res'> <MoreSpinner /></div>;   
     if (error3) console.error("Failed to load posts. Please try again.");
 
 
