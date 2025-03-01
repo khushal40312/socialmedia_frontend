@@ -353,10 +353,10 @@ if (isLoggedIn) {
           {activeRoute === "/" ? <AiFillHome size={30} /> : <GoHome size={35} />}
         </div></Link>
 
-      <Link style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }} to='/search' className={`${activeRoute === "/search" ? "" : "nav-svg"} nav-logo `}>
+{/*       <Link style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }} to='/search' className={`${activeRoute === "/search" ? "" : "nav-svg"} nav-logo `}>
         <div className='search-icon-res'>
           {activeRoute === "/search" ? <BiSolidSearch size={35} /> : <FiSearch size={32} />}</div>
-      </Link>
+      </Link> */}
       <div onClick={openModal} style={{ textDecoration: 'none', color: 'inherit', fontWeight: 'bold' }} className='nav-logo nav-svg nav-link-res'>
         <div className='plus-mobile'>  <FaPlus size={32} />
         </div></div>
