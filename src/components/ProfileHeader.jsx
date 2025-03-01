@@ -23,7 +23,7 @@ function ProfileHeader({ theme, userInfo, data, setModal, activeTab, setActiveTa
                     <h4 className={` ${theme} my-3`}>Profile</h4>
                 </div>
                 <div className={` ${theme} d-flex justify-content-center profile-mobile`} style={{ height: "90vh", width: "95vw" }}>
-                    <div className={`hrmargin ${theme}`} style={{ width: "43vw", borderRadius: "20px", border: '1px solid rgb(47 46 46)' }}>
+                    <div className={`hrmargin ${theme} profile-mob`} style={{ width: "43vw", borderRadius: "20px", border: '1px solid rgb(47 46 46)' }}>
                         <div className='my-3 d-flex justify-content-between'>
                             <h2 className='my-4 mx-3'>{userInfo.firstName || "Username"}</h2>
                             {/* Profile Picture with Zoom */}
