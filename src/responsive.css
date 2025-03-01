@@ -221,8 +221,8 @@
   .nav-links {
   left: 0;
   bottom: 0; /* Ensure it stays at the bottom */
-  right: 0;
-}
+/*   right: 0; */
+/* }
 }
 @media (max-width: 500px) {
 
@@ -231,8 +231,8 @@
 
 
 .nav-links {
-  left: 0;
-  bottom: 0; /* Ensure it stays at the bottom */
-  right: 0;
-}}
- */
+  left: 0; */
+/*   bottom: 0;  */
+/*   right: 0; */
+/* }} */
+
