@@ -212,7 +212,7 @@ const LikedByNotifications = () => {
 
   }
   if (loading) {
-    return <div style={{marginBottom:"40px"}} className='d-flex justify-content-center mx-5 align-items-center'><MoreSpinner /></div>
+    return <div style={{marginBottom:"300px"}} className='d-flex justify-content-center  align-items-center loader-res '><MoreSpinner /></div>
   }
   return (
     <div className={`d-flex flex-column ${theme}`} style={{ height: "100vh", width: "100%" }}>
