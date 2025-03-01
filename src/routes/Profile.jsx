@@ -162,11 +162,11 @@ export default function Profile() {
 
         }
     }, [location.pathname]);
-    if (loading4 && followerlist.length === 0) return <MoreSpinner />;
+    if (loading4 && followerlist.length === 0) return <div style={{marginBottom:"300px"}} className='d-flex justify-content-center  align-items-center loader-res'> <MoreSpinner /></div>;
     if (loading) {
-        return <div className="text-center text-white">Loading...</div>;
+        return <div style={{marginBottom:"300px"}} className='d-flex justify-content-center  align-items-center loader-res'> <MoreSpinner /></div>;
     }
-    if (loading3) return <p>loading</p>;
+    if (loading3) return return <div style={{marginBottom:"300px"}} className='d-flex justify-content-center  align-items-center loader-res'> <MoreSpinner /></div>;   
     if (error3) console.error("Failed to load posts. Please try again.");
 
 
