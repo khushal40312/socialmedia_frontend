@@ -9,6 +9,7 @@ import { gql, useMutation, useQuery } from '@apollo/client';
 import MoreSpinner from './MoreSpinner';
 import toast from 'react-hot-toast';
 import { useTheme } from '../../ThemeContext';
+import LoadingSpinner from './LoadingSpinner';
 
 export default function Home() {
     const dispatch = useDispatch();
@@ -63,7 +64,7 @@ export default function Home() {
             <div className={`${theme} d-flex justify-content-center home-responsive`} style={{ height: "90vh", width: "95vw" }}>
                 <div className={`${theme} post-slide`} style={{ width: "43vw", borderRadius: "20px", border: '1px solid rgb(47 46 46)' }}>
                     {loading ? (
-                        <MoreSpinner />
+                       <LoadingSpinner/>
                     ) : (
                         <div className="post-box">
                             <img
