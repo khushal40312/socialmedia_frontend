@@ -6,7 +6,7 @@
     display: none;
   }
   .nav-class {
-    position: sticky !important;
+    /* position: sticky !important; */
     flex-direction: row !important;
   }
   .nav-links {
@@ -26,7 +26,7 @@
     width: 100vw !important;
     justify-content: center !important;
     height: 5vh !important;
-  }
+}
   .top-nav {
     width: 100vw !important;
     height: 6vh !important;
@@ -180,13 +180,13 @@
     width: 100vw;
     flex-direction: row !important;
     justify-content: space-evenly;
-    /* background-color: black; */
-    height: 8vh !important;
+    background-color: black;
+    height: 19vh !important;
     gap: 0px !important;
     position: fixed;
     border-top: 2px solid;
     border-radius: 14px;
-  }
+}
   .btn-res {
     margin-left: 250px !important;
   }
@@ -195,7 +195,7 @@
   }
   .mobile-width {
     width: 100vw !important;
-    height: 97vh !important;}
+    height: 89vh !important;}
     .chat-res{
       height: 90vh !important;
     }
@@ -203,6 +203,6 @@
 @media (max-width: 500px) {
 
   .Follow-btn-mention {
-    width: 178px;}
+    width: 170px;}
 
 }
