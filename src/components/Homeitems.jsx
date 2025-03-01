@@ -106,7 +106,7 @@ export default function Home() {
                             <strong>Content</strong>
                             <textarea value={content} onChange={(e) => setContent(e.target.value)} placeholder="What's New" className={`bw-textarea ${theme}-textarea`}></textarea>
                         </div>
-                        <button onClick={addPost} style={{ marginLeft: "390px" }} className={`post-btn ${theme}`}>
+                        <button onClick={addPost} style={{ marginLeft: "390px" }} className={`post-btn btn-res ${theme}`}>
                             Post
                         </button>
                     </Modal.Body>
