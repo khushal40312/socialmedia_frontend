@@ -173,6 +173,7 @@
   .chat-res{
     height: 90vh !important;
   }
+ 
 }
 @media (max-width: 385px) {
   .nav-links {
@@ -198,4 +199,10 @@
     .chat-res{
       height: 90vh !important;
     }
+}
+@media (max-width: 500px) {
+
+  .Follow-btn-mention {
+    width: 178px;}
+
 }
