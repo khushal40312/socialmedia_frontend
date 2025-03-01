@@ -16,7 +16,7 @@
     /* background-color: black; */
     height: 5vh !important;
     gap: 0px !important;
-    position: fixed;
+    
 
     border-top: 2px solid;
     border-radius: 14px;
@@ -183,7 +183,7 @@
     background-color: black;
     height: 19vh !important;
     gap: 0px !important;
-    position: fixed;
+    
     border-top: 2px solid;
     border-radius: 14px;
 }
