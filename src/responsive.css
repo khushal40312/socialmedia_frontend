@@ -57,7 +57,7 @@
   .top-nav {
     width: 100vw !important;
     height: 60px !important;
-    position: fixed;
+    position: stickey;
   }
   .nav-inbox {
     margin-bottom: 0 !important;
@@ -65,7 +65,7 @@
   .home-responsive {
     width: 100vw !important;
     height: calc(90vh - 60px) !important;
-    margin-top: 60px;
+/*     margin-top: 60px; */
 
   }
   /* .main-post-res{
@@ -130,7 +130,7 @@
   .search-bar-res {
     width: 100vw !important;
     height: calc(90vh - 60px) !important;
-    margin-top: 60px;
+/*     margin-top: 60px; */
     /* height: 92vh !important; */
   }
   .search-div {
@@ -174,7 +174,7 @@
   .notification-mobile {
     height: 86vh !important;
     height: calc(90vh - 60px) !important;
-    margin-top: 60px;
+/*     margin-top: 60px; */
   }
   .notification-inner-mobile {
     width: 97% !important;
@@ -184,7 +184,7 @@
   }
   .profile-mobile {
     height: calc(90vh - 60px) !important;
-    margin-top: 60px;
+/*     margin-top: 60px; */
     width: 100vw !important;
   }
   .inbox-list {
@@ -239,7 +239,7 @@
 
  .ul-inbox{
   height: calc(90vh - 60px) !important;
-    margin-top: 60px;
+/*     margin-top: 60px; */
     margin-bottom: 0;
  }
  .mobile-inbox{
@@ -255,8 +255,5 @@
 
   height: 75% !important;
  }
- .chat-username{
 
-  font-size:large
- }
 }
