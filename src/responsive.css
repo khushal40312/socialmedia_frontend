@@ -197,7 +197,7 @@
     text-align: center;
   }
   .mobile-width {
-    width: 96vw !important;
+    width: 100vw !important;
     height: calc(100vh - 44px) !important;
     margin-bottom: 44px !important;
   }
@@ -234,6 +234,8 @@ width: 100vw !important;
   .chat-res {
     height: calc(100vh - 44px) !important;
     margin-bottom: 44px;
+    width: 100vw !important;
+    justify-content: center;
   }
   .top-nav-mobile {
     width: 100vw !important;
@@ -263,13 +265,14 @@ width: 100vw !important;
   margin-top: 60px;
 }
 .inbox-main-mob {
-  width: 100vw;
-
+  width: 100vw !important;
+justify-content: center;
   height: calc(100vh - 44px) !important;
   margin-bottom: 44px;
 }
 #chatContainer {
-  height: 80% !important;
+  height: calc(100vh - 46px - 44px - 30px - 20px) !important;
+  margin-top: 30px;
 }
 #scrollable-content {
   overflow-y: scroll;
@@ -283,6 +286,27 @@ width: 100vw !important;
   .Follow-btn-mention{
 
   width:44vw !important;
+}
+.chat-head{
+
+  height: 50px !important;
+  position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    gap: 17px;
+    padding-top: 24px;
+
+}
+.input-res{
+  position: fixed;
+    bottom: 44px;
+    
+    display: block;
+    height: 46px;
+    margin-top: 0 !important;
+    width: 94vw;
+
 }
 }
 
