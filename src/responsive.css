@@ -266,7 +266,7 @@
  }
  #scrollable-content {
   overflow-y: scroll;
-  height: calc(100vh - 60px - 43px - 70px - 1rem) !important;
+  height: calc(100vh - 60px - 95px - 77px - 1rem) !important;
 
 }
 }
