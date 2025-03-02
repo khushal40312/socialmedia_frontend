@@ -197,8 +197,9 @@
     text-align: center;
   }
   .mobile-width {
-    width: 100vw !important;
+    width: 96vw !important;
     height: calc(100vh - 44px) !important;
+    margin-bottom: 44px !important;
   }
   .mobile-text-sender {
     margin: 7px auto 5px 30% !important;
