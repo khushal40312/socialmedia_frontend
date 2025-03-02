@@ -10,15 +10,15 @@
   }
   .main-post-res{
 
-    height: calc(100vh - 95px) !important;
-    margin-bottom: 95px;
+    height: calc(100vh - 44px) !important;
+    margin-bottom: 44px;
   }
   .thread-logo {
     display: none;
   }
   .nav-class {
     width: 100vw !important;
-    height: 95px;
+    height: 44px;
     flex-direction: row; /* Horizontal layout */
     justify-content: space-around;
     position: fixed;
@@ -49,7 +49,7 @@
     justify-content: space-around;
     padding-left:10px !important ;
     padding-right:10px !important;
-    height: 95px;
+    height: 44px;
         position: fixed;
     bottom: 0;
     
@@ -65,13 +65,14 @@
     width: 100vw !important;
     height: 60px !important;
     position: fixed;
+    top:0;
   }
   .nav-inbox {
     margin-bottom: 0 !important;
   }
   .home-responsive {
     width: 100vw !important;
-    height: calc(100vh - 60px - 95px) !important;
+    height: calc(100vh - 60px - 44px) !important;
     margin-top: 60px;
 
   }
@@ -97,7 +98,7 @@
     position: fixed;
     top: 32px;
     /* right: 3px; */
-    left: 195px;
+    left: 144px;
     width: 139px;
     height: 57px;
     font-size: 10px;
@@ -114,7 +115,7 @@
 
   .post-slide {
     width: 94vw !important;
-    height: calc(100vh - 60px - 95px) !important;
+    height: calc(100vh - 60px - 44px) !important;
 
     /* margin-top: 60px; */
 
@@ -228,7 +229,7 @@
     bottom: 80px;
   }
   .btn-res {
-    margin-left: 295px !important;
+    margin-left: 244px !important;
   }
   .profile-mob {
     height: calc(90vh - 60px) !important;
@@ -267,7 +268,7 @@
  }
  #scrollable-content {
   overflow-y: scroll;
-  height: calc(100vh - 60px - 95px - 77px - 1rem) !important;
+  height: calc(100vh - 60px - 44px - 77px - 1rem) !important;
 
 }
 }
