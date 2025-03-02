@@ -268,7 +268,8 @@
  }
  #scrollable-content {
   overflow-y: scroll;
-  height: calc(100vh - 60px - 44px - 77px - 1rem) !important;
+/*   height: calc(100vh - 60px - 44px - 77px - 1rem) !important; */
+   max-height:449px !important;
 
 }
 }
