@@ -287,16 +287,18 @@ justify-content: center;
 
   width:44vw !important;
 }
-.chat-head{
-
+.chat-head {
   height: 50px !important;
   position: fixed;
-    top: 0;
-    left: 0;
-    align-items: center;
-    gap: 17px;
-    padding-top: 24px;
-
+  top: 0;
+  left: 0;
+  align-items: center;
+  gap: 4px;
+  /* padding-top: 4px; */
+  width: 373px;
+}
+.margin-bottom-zero{
+  margin-bottom: 0 !important;
 }
 .input-res{
   position: fixed;
