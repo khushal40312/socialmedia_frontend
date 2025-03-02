@@ -255,5 +255,8 @@
 
   height: 75% !important;
  }
+.visit-mob{
 
+  display:flex;
+  justify-content:space-evenly;
 }
