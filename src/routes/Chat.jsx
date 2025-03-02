@@ -269,6 +269,7 @@ navigate("/inbox")
         <div className="d-flex chat-head">
        <span onClick={BacktoInbox}> <IoIosArrowBack size={40} /></span>
           <img
+          className="margin-bottom-zero"
             src={user.picture || "/default.jpg"}
             alt="profile"
             style={{ width: "45px", height: "45px", marginBottom: "7px", borderRadius: "50%", cursor: "pointer" }}
