@@ -299,6 +299,10 @@ justify-content: center;
 }
 .margin-bottom-zero{
   margin-top: 0px !important;
+  width: 12px;
+  height: 12px;
+  margin-bottom: 5px;
+
 }
 .chat-timestamp {
   font-size: 7px;
@@ -313,6 +317,14 @@ justify-content: center;
     margin-top: 0 !important;
     width: 94vw;
 
+}
+.img-chat{
+  height: 44px !important;
+  padding: 2px 0 !important;
+}
+.chat-username{
+
+font-size: 19px !important;
 }
 }
 
