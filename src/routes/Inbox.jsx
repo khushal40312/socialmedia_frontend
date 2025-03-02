@@ -220,10 +220,11 @@ export default function Inbox() {
     return <div style={{ marginBottom: "300px" }} className='d-flex justify-content-center  align-items-center loader-res '> <LoadingSpinner/>  </div>
   }
   return (
-    <div className={`${theme}`} style={{ display: "flex", height: "100vh", width: '95vw' }}>
-      {(!isMobile || !username) && (<div className={`${theme} remove-padding `} style={{ width: isMobile ? "100%" : "30%", backgroundColor: "#121212", color: "#fff", overflowY: "auto", padding: "10px" }}>
-        <h2 className='heading-center'>Messages</h2>
-        <ul style={{ listStyleType: "none", padding: 0 }}>
+   <div className={`${theme} inbox-main-mob`} style={{ display: "flex", height: "100vh", width: '95vw' }}>
+      
+      {(!isMobile || !username) && (<div className={`${theme} remove-padding mobile-inbox`} style={{ width: isMobile ? "100%" : "30%", backgroundColor: "#121212", color: "#fff", overflowY: "auto", padding: "10px" }}>
+   <div className='top-nav-mobile'>     <h2 className='heading-center '>Messages</h2></div>
+        <ul className='ul-inbox' style={{ listStyleType: "none", padding: 0 }}>
           {chatss.map((chat) => (
             <li className='inbox-list' key={chat.id} style={{ margin: "10px 0", cursor: "pointer" }}>
               <Link
