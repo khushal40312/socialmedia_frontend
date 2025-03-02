@@ -10,15 +10,15 @@
   }
   .main-post-res{
 
-    height: calc(100vh - 84px) !important;
-    margin-bottom: 84px;
+    height: calc(100vh - 90px) !important;
+    margin-bottom: 90px;
   }
   .thread-logo {
     display: none;
   }
   .nav-class {
     width: 100vw !important;
-    height: 84px;
+    height: 90px;
     flex-direction: row; /* Horizontal layout */
     justify-content: space-around;
     position: fixed;
@@ -49,7 +49,7 @@
     justify-content: space-around;
     padding-left:10px !important ;
     padding-right:10px !important;
-    height: 84px;
+    height: 90px;
     
   
   }
@@ -70,7 +70,7 @@
   }
   .home-responsive {
     width: 100vw !important;
-    height: calc(100vh - 60px - 84px) !important;
+    height: calc(100vh - 60px - 90px) !important;
     margin-top: 60px;
 
   }
@@ -113,7 +113,7 @@
 
   .post-slide {
     width: 94vw !important;
-    height: calc(100vh - 60px - 84px) !important;
+    height: calc(100vh - 60px - 90px) !important;
 
     /* margin-top: 60px; */
 
