@@ -18,7 +18,7 @@ function ProfileHeader({ theme, userInfo, data, setModal, activeTab, setActiveTa
 
     return (
         <>
-            <div className={`d-flex flex-column ${theme}`}>
+            <div className={`d-flex flex-column ${theme}  main-post-res`}>
                 <div className={`${theme} d-flex justify-content-center top-nav`} style={{ width: '95vw', height: "10vh" }}>
                     <h4 className={` ${theme} my-3`}>Profile</h4>
                 </div>
