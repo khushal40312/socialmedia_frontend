@@ -215,7 +215,7 @@ const LikedByNotifications = () => {
     return <div style={{marginBottom:"300px"}} className='d-flex justify-content-center  align-items-center loader-res '><MoreSpinner /></div>
   }
   return (
-    <div className={`d-flex flex-column ${theme}`} style={{ height: "100vh", width: "100%" }}>
+    <div className={`d-flex flex-column ${theme}  main-post-res`} style={{ height: "100vh", width: "100%" }}>
       <div
         className={`d-flex justify-content-center align-items-center ${theme} top-nav`}
         style={{ height: "10vh", borderBottom: "1px solid rgb(47 46 46)" }}
