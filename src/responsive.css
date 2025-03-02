@@ -298,7 +298,7 @@ justify-content: center;
   /* width: 373px; */
 }
 .margin-bottom-zero{
-  margin-top: 0 !important;
+  margin-top: 0px !important;
 }
 .chat-timestamp {
   font-size: 7px;
