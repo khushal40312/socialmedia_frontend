@@ -295,7 +295,7 @@ justify-content: center;
   align-items: center;
   gap: 4px;
   /* padding-top: 4px; */
-  width: 373px;
+  /* width: 373px; */
 }
 .margin-bottom-zero{
   margin-bottom: 0 !important;
