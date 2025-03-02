@@ -8,6 +8,7 @@ import { gql, useQuery } from '@apollo/client';
 import debounce from 'lodash.debounce';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { useNavigate } from 'react-router-dom';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const USER_FIND_QUERY = gql`
 query FindByName($firstName: String!, $offset: Int, $limit: Int) {
@@ -102,11 +103,11 @@ export default function SearchProfile() {
     const closeZoomModal = () => {
         setZoomedImage(null); // Close the zoom modal
     };
-    if (loading && SearchedUsers.length === 0) return <div style={{marginBottom:"40px"}} className='d-flex justify-content-center mx-5 align-items-center'><MoreSpinner /></div>
-    
+    if (loading && SearchedUsers.length === 0) return <div style={{ marginBottom: "40px" }} className='d-flex justify-content-center mx-5 align-items-center'><MoreSpinner /></div>
+
     if (error) return <p className="text-center mt-4">An error occurred. Please try again later.</p>;
 
-    
+
 
     const findProfile = (payload) => {
         const { username } = payload;
@@ -115,7 +116,7 @@ export default function SearchProfile() {
 
     return (
         <>
-            <div className={`d-flex flex-column ${theme}`}>
+            <div className={`d-flex flex-column ${theme} main-post-res`}>
                 <div className={`${theme} d-flex justify-content-center top-nav`} style={{ width: '95vw', height: "10vh" }}>
                     <h4 className={` ${theme} my-3`}>Search</h4>
                 </div>
@@ -156,7 +157,7 @@ export default function SearchProfile() {
                                     >
                                         {filteredUsers.map((user) => (
                                             <div className="container my-1 search-component" key={user.id}>
-                                                {loading?<LoadingSpinner/>:    <div
+                                                {loading ? <LoadingSpinner /> : <div
                                                     style={{
                                                         border: "2px solid white",
                                                         borderRadius: "25px",
