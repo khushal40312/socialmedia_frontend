@@ -266,7 +266,7 @@ navigate("/inbox")
   return (
     <div className={`${theme} chat-res`} style={{ display: "flex", height: "100vh" }}>
       <div className={`${theme} mobile-width`} style={{ width: "66vw", backgroundColor: "#1e1e1e", color: "#fff", padding: "20px" }}>
-        <div className="d-flex">
+        <div className="d-flex chat-head">
        <span onClick={BacktoInbox}> <IoIosArrowBack size={40} /></span>
           <img
             src={user.picture || "/default.jpg"}
@@ -316,7 +316,7 @@ navigate("/inbox")
             </div>
           ))}
         </div>
-        <div style={{ marginTop: "10px", display: "flex", gap: "10px" }}>
+        <div className="input-res" style={{ marginTop: "10px", display: "flex", gap: "10px" }}>
           <input
             type="text"
             placeholder="Type your message"
