@@ -19,7 +19,7 @@ export default function Home() {
         setOpen(!isOpen)
     }
     return (
-        <div className="d-flex flex-column ">
+        <div className="d-flex flex-column main-post-res">
 
             <div className='d-flex justify-content-center top-nav' style={{ width: '95vw', height: "10vh" }}>
                 <h5 onClick={toggleDropdown} style={{ height: "3vh" }} className={`my-3 ${theme} `}>For you </h5>
