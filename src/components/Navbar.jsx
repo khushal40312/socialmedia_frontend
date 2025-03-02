@@ -383,7 +383,8 @@ if (isLoggedIn) {
     setNotificationVisible(false);
   };
   return (
-    <nav className={`nav-class d-flex  align-items-center   ${theme}`}>
+        <nav className={`nav-class   align-items-center   ${theme}`}>
+
       <Notification
         isVisible={isNotificationVisible}
         message={notificationMessage}
