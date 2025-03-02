@@ -255,4 +255,12 @@
 
   height: 75% !important;
  }
+  .Unfollow-btn-profile{
+
+  width:44vw !important;
+}
+  .Follow-btn-mention{
+
+  width:44vw !important;
+}
 }
