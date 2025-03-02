@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useQuery, useMutation, useSubscription } from "@apollo/client";
 import gql from "graphql-tag";
-
+import { IoIosArrowBack } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import { formatDistanceToNow } from "date-fns";
 import { useTheme } from "../../ThemeContext";
@@ -83,6 +83,7 @@ const SEND_MESSAGE_MUTATION = gql`
 
 const Chat = () => {
     const { theme } = useTheme();
+    const navigate = useNavigate();
   
   const { username } = useParams(); // Get the username from the route
   const [message, setMessage] = useState("");
@@ -238,14 +239,7 @@ const Chat = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
-  function removeBeforeAt(input) {
-    const atIndex = input.indexOf('@');
-    if (atIndex !== -1) {
-      return input.slice(atIndex + 1); // Remove everything before and including '@'
-    }
-    // console.log(input)
-    return input; // Return the original string if '@' is not found
-  }
+
 
   const messageStyle = (isCurrentUser, read) => ({
     background: isCurrentUser ? (read ? "#4CAF50" : "#81C784") : "#FFFFFF",
@@ -257,7 +251,10 @@ const Chat = () => {
     boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
     marginTop: "7px"
   });
+const BacktoInbox=()=>{
 
+navigate("/inbox")
+}
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") setZoomImage(null);
@@ -270,6 +267,7 @@ const Chat = () => {
     <div className={`${theme} chat-res`} style={{ display: "flex", height: "100vh" }}>
       <div className={`${theme} mobile-width`} style={{ width: "66vw", backgroundColor: "#1e1e1e", color: "#fff", padding: "20px" }}>
         <div className="d-flex">
+       <span onClick={BacktoInbox}> <IoIosArrowBack size={40} /></span>
           <img
             src={user.picture || "/default.jpg"}
             alt="profile"
