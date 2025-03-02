@@ -17,7 +17,7 @@
     height: 8vh;
     flex-direction: row; /* Horizontal layout */
     justify-content: space-around;
-    position: sticky;
+    position: fixed;
     bottom: 0;
     left: 0;
     top: unset;
@@ -57,7 +57,7 @@
   .top-nav {
     width: 100vw !important;
     height: 60px !important;
-    position: sticky;
+    position: fixed;
   }
   .nav-inbox {
     margin-bottom: 0 !important;
@@ -65,7 +65,7 @@
   .home-responsive {
     width: 100vw !important;
     height: calc(90vh - 60px) !important;
-/*     margin-top: 60px; */
+    margin-top: 60px;
 
   }
   /* .main-post-res{
@@ -184,7 +184,7 @@
   }
   .profile-mobile {
     height: calc(90vh - 60px) !important;
-/*     margin-top: 60px; */
+    margin-top: 60px;
     width: 100vw !important;
   }
   .inbox-list {
@@ -223,7 +223,7 @@
   }
   .profile-mob {
     height: calc(90vh - 60px) !important;
-    /* margin-top: 60px; */
+    margin-top: 60px;
   }
   .chat-res{
     height: 90vh !important;
@@ -239,7 +239,7 @@
 
  .ul-inbox{
   height: calc(90vh - 60px) !important;
-/*     margin-top: 60px; */
+    margin-top: 60px;
     margin-bottom: 0;
  }
  .mobile-inbox{
