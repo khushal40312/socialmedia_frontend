@@ -56,15 +56,25 @@
 }
   .top-nav {
     width: 100vw !important;
-    height: 6vh !important;
+    height: 60px !important;
+    position: fixed;
   }
   .nav-inbox {
     margin-bottom: 0 !important;
   }
   .home-responsive {
     width: 100vw !important;
-    height: 89vh !important;
+    height: calc(90vh - 60px) !important;
+    margin-top: 60px;
+
   }
+  /* .main-post-res{
+
+    height: calc(90vh - 60px) !important;
+    margin-top: 60px;
+
+
+  } */
   .nav-link-res {
     margin-bottom: 0px !important;
     height: 5vh;
@@ -97,6 +107,8 @@
 
   .post-slide {
     width: 94vw !important;
+    /* margin-top: 60px; */
+
   }
   .post-box {
     width: 91vw;
@@ -117,6 +129,8 @@
     } */
   .search-bar-res {
     width: 100vw !important;
+    height: calc(90vh - 60px) !important;
+    margin-top: 60px;
     /* height: 92vh !important; */
   }
   .search-div {
@@ -153,18 +167,24 @@
   }
   .search-main-res {
     height: 88vh !important;
+    height: calc(90vh - 60px) !important;
+     
   }
 
   .notification-mobile {
     height: 86vh !important;
+    height: calc(90vh - 60px) !important;
+    margin-top: 60px;
   }
   .notification-inner-mobile {
     width: 97% !important;
     border-radius: 10px;
-    height: 94% !important;
+    height: calc(90vh - 60px) !important;
+    
   }
   .profile-mobile {
-    height: 89vh !important;
+    height: calc(90vh - 60px) !important;
+    margin-top: 60px;
     width: 100vw !important;
   }
   .inbox-list {
@@ -202,52 +222,41 @@
     margin-left: 295px !important;
   }
   .profile-mob {
-    height: 88vh !important;
+    height: calc(90vh - 60px) !important;
+    /* margin-top: 60px; */
   }
   .chat-res{
     height: 90vh !important;
   }
- 
+ .top-nav-mobile{
+  width: 100vw !important;
+  height: 60px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
 }
-/* @media (max-width: 385px) {
-  .nav-links {
-    width: 100vw;
-    flex-direction: row !important;
-    justify-content: space-evenly;
-    background-color: black;
-    height: 19vh !important;
-    gap: 0px !important;
-    position: fixed;
-    border-top: 2px solid;
-    border-radius: 14px;
-}
-  .btn-res {
-    margin-left: 250px !important;
-  }
-  .profile-mob {
-    height: 87vh !important;
-  }
-  .mobile-width {
-    width: 100vw !important;
-    height: 89vh !important;}
-    .chat-res{
-      height: 90vh !important;
-    }
-  .nav-links {
-  left: 0;
-  bottom: 0; /* Ensure it stays at the bottom */
-  /* right: 0;
-}
-}
-@media (max-width: 500px) {
 
-  .Follow-btn-mention {
-    width: 170px;}
+ .ul-inbox{
+  height: calc(90vh - 60px) !important;
+    margin-top: 60px;
+    margin-bottom: 0;
+ }
+ .mobile-inbox{
+  height: calc(90vh - 60px) !important;
+    
+ }
+ .inbox-main-mob{
 
+  height: unset !important;
+  width: unset !important;
+ }
+ #chatContainer{
 
-.nav-links {
-  left: 0;
-  bottom: 0; /* Ensure it stays at the bottom */
-  /* right: 0; */
-/* }} */
- 
+  height: 75% !important;
+ }
+ .chat-username{
+
+  font-size:large
+ }
+}
