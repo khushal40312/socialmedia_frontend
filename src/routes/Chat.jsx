@@ -271,16 +271,16 @@ const Chat = () => {
       <div className={`${theme} mobile-width`} style={{ width: "66vw", backgroundColor: "#1e1e1e", color: "#fff", padding: "20px" }}>
         <div className="d-flex">
           <img
-            src={user?.picture || "/default.jpg"}
+            src={user.picture || "/default.jpg"}
             alt="profile"
             style={{ width: "45px", height: "45px", marginBottom: "7px", borderRadius: "50%", cursor: "pointer" }}
             onClick={(e) => {
               e.preventDefault(); // Prevent navigation
-              setZoomImage(user?.picture || "/default.jpg");
+              setZoomImage(user.picture || "/default.jpg");
             }}
           />
 
-          <h3 className="mx-2"> {user.firstName}{user.lastName}</h3>
+          <h3 className="mx-2 chat-username"> {user.firstName}{user.lastName}</h3>
           {user.isActive && <img style={{
             width: "10px", height: "10px", left: "135px",
             top: "69px", marginTop: "12px"
