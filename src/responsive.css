@@ -5,20 +5,24 @@
   }
   .main-div {
     width: 100vw !important;
-    height: auto !important;
-    padding-bottom: 24px !important;
+    height: 100vh !important;
+    /* padding-bottom: 24px !important; */
   }
-  
+  .main-post-res{
+
+    height: calc(100vh - 43px) !important;
+    margin-bottom: 43px;
+  }
   .thread-logo {
     display: none;
   }
   .nav-class {
     width: 100vw !important;
-    height: 8vh;
+    height: 43px;
     flex-direction: row; /* Horizontal layout */
     justify-content: space-around;
     position: fixed;
-    bottom: 0;
+    /* bottom: 0; */
     left: 0;
     top: unset;
     z-index: 9999;
@@ -49,10 +53,10 @@
   }
 
   .nav-class {
-    height: 0vh !important;
+    /* height: 0vh !important; */
     width: 100vw !important;
     justify-content: center !important;
-    height: 5vh !important;
+  
 }
   .top-nav {
     width: 100vw !important;
@@ -64,7 +68,7 @@
   }
   .home-responsive {
     width: 100vw !important;
-    height: calc(90vh - 60px) !important;
+    height: calc(100vh - 60px - 43px) !important;
     margin-top: 60px;
 
   }
@@ -107,12 +111,14 @@
 
   .post-slide {
     width: 94vw !important;
+    height: calc(100vh - 60px - 43px) !important;
+
     /* margin-top: 60px; */
 
   }
   .post-box {
     width: 91vw;
-    height: 11vh;
+    height: 77px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -130,7 +136,7 @@
   .search-bar-res {
     width: 100vw !important;
     height: calc(90vh - 60px) !important;
-/*     margin-top: 60px; */
+    margin-top: 60px;
     /* height: 92vh !important; */
   }
   .search-div {
@@ -174,7 +180,7 @@
   .notification-mobile {
     height: 86vh !important;
     height: calc(90vh - 60px) !important;
-/*     margin-top: 60px; */
+    margin-top: 60px;
   }
   .notification-inner-mobile {
     width: 97% !important;
@@ -223,7 +229,7 @@
   }
   .profile-mob {
     height: calc(90vh - 60px) !important;
-    margin-top: 60px;
+    /* margin-top: 60px; */
   }
   .chat-res{
     height: 90vh !important;
@@ -254,13 +260,55 @@
  #chatContainer{
 
   height: 75% !important;
+  
  }
-  .Unfollow-btn-profile{
+ #scrollable-content {
+  overflow-y: scroll;
+  height: calc(100vh - 60px - 43px - 70px - 1rem) !important;
 
-  width:44vw !important;
 }
-  .Follow-btn-mention{
+}
+/* @media (max-width: 385px) {
+  .nav-links {
+    width: 100vw;
+    flex-direction: row !important;
+    justify-content: space-evenly;
+    background-color: black;
+    height: 19vh !important;
+    gap: 0px !important;
+    position: fixed;
+    border-top: 2px solid;
+    border-radius: 14px;
+}
+  .btn-res {
+    margin-left: 250px !important;
+  }
+  .profile-mob {
+    height: 87vh !important;
+  }
+  .mobile-width {
+    width: 100vw !important;
+    height: 89vh !important;}
+    .chat-res{
+      height: 90vh !important;
+    }
+  .nav-links {
+  left: 0;
+  bottom: 0; /* Ensure it stays at the bottom */
+  /* right: 0;
+}
+}
+@media (max-width: 500px) {
 
-  width:44vw !important;
-}
-}
+  .Follow-btn-mention {
+    width: 170px;}
+
+
+.nav-links {
+  left: 0;
+  bottom: 0; /* Ensure it stays at the bottom */
+  /* right: 0; */
+/* }} */
+ /* .post-box{
+  position: sticky;
+ } */
