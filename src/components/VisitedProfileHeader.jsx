@@ -22,8 +22,7 @@ const isfollower= followerslist.some(f=>f.id===localStorage.getItem("userId"))
                 <h4 className={` ${theme} my-3`}>Profile</h4>
             </div>
             <div className={` ${theme} d-flex justify-content-center`} style={{ height: "90vh", width: "95vw" }}>
-                               <div className={`hrmargin ${theme} profile-mob`} style={{ width: "43vw", borderRadius: "20px", border: '1px solid rgb(47 46 46)' }}>
-
+                <div className={`hrmargin ${theme} profile-mob`} style={{ width: "43vw", borderRadius: "20px", border: '1px solid rgb(47 46 46)' }}>
                     <div className='my-3 d-flex justify-content-between'>
                         <h2 className='my-4 mx-3'>{userInfo.firstName || "Username"}</h2>
                         {/* Profile Picture */}
@@ -45,7 +44,7 @@ const isfollower= followerslist.some(f=>f.id===localStorage.getItem("userId"))
                         <p onClick={() => setModal2(true)} className='my-4 mx-3 text-secondary'> {followers.length} followers </p>
                         <span className='mx-4 my-3'><FaInstagram size={32} /></span>
                     </div>
-                    <div className="container d-flex justify-content-between align-items-center">
+                    <div className=" visit-mob">
                         {!isFollowByUser ? (
                             <button
                                 className="Follow-btn-profile"
