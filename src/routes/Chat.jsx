@@ -280,7 +280,8 @@ navigate("/inbox")
           />
 
           <h3 className="mx-2 chat-username"> {user.firstName}{user.lastName}</h3>
-          {user.isActive && <img style={{
+          {user.isActive && <img           className="margin-bottom-zero"
+style={{
             width: "10px", height: "10px", left: "135px",
             top: "69px", marginTop: "12px"
           }} src="/button.png" alt="online" />}
