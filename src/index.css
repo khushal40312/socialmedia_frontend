@@ -34,9 +34,9 @@ nav {
   height: 49px; */
   cursor: pointer;
 }
-.nav-logo svg {
-  margin: 8px;
-}
+/* .nav-logo svg {
+  width: 30px !important;
+} */
 .thread-logo svg {
   filter: invert(0.3);
 }
@@ -720,6 +720,7 @@ body {
    /* gap: 25px; */
   flex-direction: column;
   justify-content: space-around;
+  display: flex;
 
  }
 
