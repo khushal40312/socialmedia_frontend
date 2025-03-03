@@ -103,7 +103,7 @@ export default function SearchProfile() {
     const closeZoomModal = () => {
         setZoomedImage(null); // Close the zoom modal
     };
-    if (loading && SearchedUsers.length === 0) return <div style={{ marginBottom: "40px" }} className='d-flex justify-content-center mx-5 align-items-center'><MoreSpinner /></div>
+   // if (loading && SearchedUsers.length === 0) return <div style={{ marginBottom: "40px" }} className='d-flex justify-content-center mx-5 align-items-center'><MoreSpinner /></div>
 
     if (error) return <p className="text-center mt-4">An error occurred. Please try again later.</p>;
 
@@ -147,7 +147,7 @@ export default function SearchProfile() {
                                         dataLength={filteredUsers.length}
                                         next={fetchMoreUsers}
                                         hasMore={hasMore}
-                                        loader={loadingMore && <MoreSpinner />}
+                                        loader={loading&&loadingMore && <MoreSpinner />}
                                         scrollableTarget="scrollable-content-search"
                                         endMessage={
                                             <div style={{ textAlign: 'center', marginTop: '20px' }}>
